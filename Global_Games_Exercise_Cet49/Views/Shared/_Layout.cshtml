@@ -19,22 +19,16 @@
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Global_Games_Exercise_Cet49</a>
+            <div id="logo">
+                <h1><span class="destaque">Global</span> Games Enterprise</h1>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            <nav>
+                <ul>
+                    <li class="selecionado"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Services">Serviços</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </nav>
 
@@ -44,7 +38,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2020 - Global_Games_Exercise_Cet49</p>
+            <p>Global Games, Todos os direitos reservados &copy; CET 49 2020</p>
         </footer>
     </div>
 

@@ -22,6 +22,17 @@ namespace Global_Games_Exercise_Cet49.Controllers
             return View();
         }
 
+
+        public IActionResult Services()
+        {
+            ViewData["Message"] = "Your Services page.";
+
+            return View();
+        }
+
+
+
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
