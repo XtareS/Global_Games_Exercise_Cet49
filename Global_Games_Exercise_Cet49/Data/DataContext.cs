@@ -8,6 +8,7 @@ namespace Global_Games_Exercise_Cet49.Data
 
         public DbSet<Contacto> Contactos { get; set; }
 
+        public DbSet<Newl> Newls { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

@@ -3,14 +3,16 @@ using Global_Games_Exercise_Cet49.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Global_Games_Exercise_Cet49.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201217172542_LigForm")]
+    partial class LigForm
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,32 +26,15 @@ namespace Global_Games_Exercise_Cet49.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Mail")
-                        .IsRequired();
+                    b.Property<string>("Mail");
 
-                    b.Property<string>("Mensage")
-                        .IsRequired();
+                    b.Property<string>("Mensage");
 
-                    b.Property<string>("Name")
-                        .IsRequired();
+                    b.Property<string>("Name");
 
                     b.HasKey("Id");
 
                     b.ToTable("Contactos");
-                });
-
-            modelBuilder.Entity("Global_Games_Exercise_Cet49.Data.Entities.Newl", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Mail")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Newls");
                 });
 #pragma warning restore 612, 618
         }

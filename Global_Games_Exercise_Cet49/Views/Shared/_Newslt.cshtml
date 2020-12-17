@@ -1,0 +1,17 @@
+﻿@model Global_Games_Exercise_Cet49.Data.Entities.Newl
+
+<section id="newsletter">
+    <div class="container">
+        <h1>Subscreve a nossa newsletter</h1>
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail"  class="form-control"  placeholder="Coloque o email..." />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+           
+                <input type="submit" value="Subscrever" class="button_1 btn btn-default" />
+            </div>
+        </form>
+    </div>
+</section>

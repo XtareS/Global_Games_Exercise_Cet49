@@ -11,6 +11,7 @@
   
 </head>
 <body>
+    @* Navbar / menu *@
     <header>
         <div class="container">
             <div id="logo">
@@ -18,30 +19,45 @@
             </div>
             <nav>
                 <ul>
-                    <li class="selecionado"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Services">Serviços</a></li>
-                    <li><a asp-area="" asp-controller="Contactos" asp-action="Index">Contactos</a></li>
+                    <li id="Home"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li id="About"><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
+                    <li id="Services"><a asp-area="" asp-controller="Home" asp-action="Services">Serviços</a></li>
+                    @* <li id="Contactos" ><a asp-area="" asp-controller="Contactos" asp-action="Index">Contactos</a></li>*@
                 </ul>
             </nav>
         </div>
     </header>
 
-    <partial name="_CookieConsentPartial" />
+    <section id="showcase">
+        <div class="container">
+            <h1>A melhor plataforma de realidade virtual</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deleniti commodi sapiente, eligendi nesciunt accusamus, architecto alias consequatur sunt ipsam porro fugit voluptates suscipit vero sint culpa non numquam hic?</p>
+        </div>
+    </section>
 
+    @* Newsleter *@
+    <partial name="_Newslt.cshtml" />
+
+
+
+
+    @* aqui será demonstrado o conteudo das outras views/páginas *@
     <div class="container body-content">
         @RenderBody()
+
+
         <hr />
+        @* Footer *@
         <footer>
-            <p>Global Games, Todos os direitos reservados &copy; CET 49 2020</p>
+            <p>Global Games, Todos os direitos reservados &copy; CET 49  @DateTime.Now.Year</p>
         </footer>
     </div>
 
     <environment include="Development">
-    
+
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
-   
+
 
     @RenderSection("Scripts", required: false)
 </body>

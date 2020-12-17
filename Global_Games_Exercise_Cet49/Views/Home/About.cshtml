@@ -1,21 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Global Games | Sobre";
 }
-<<section id="showcase">
-    <div class="container">
-        <h1>A melhor plataforma de realidade virtual</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deleniti commodi sapiente, eligendi nesciunt accusamus, architecto alias consequatur sunt ipsam porro fugit voluptates suscipit vero sint culpa non numquam hic?</p>
-    </div>
-</section>
-<section id="newsletter">
-    <div class="container">
-        <h1>Subscreve a nossa newsletter</h1>
-        <form>
-            <input type="email" placeholder="Coloque email..." />
-            <button type="submit" class="button_1">Subscrever</button>
-        </form>
-    </div>
-</section>
+
+@*
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscreve a nossa newsletter</h1>
+            <form>
+                <input type="email" placeholder="Coloque email..." />
+                <button type="submit" class="button_1">Subscrever</button>
+            </form>
+        </div>
+    </section>
+*@
 <section id="main">
     <div class="container">
         <article id="main-col">
@@ -31,3 +28,8 @@
         </aside><!--fim do aside-->
     </div>
 </section>
+@section Scripts{
+    <script type="text/javascript">
+        document.querySelector('#About').className = 'selecionado';
+    </script>
+}
