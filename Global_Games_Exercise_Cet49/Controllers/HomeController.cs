@@ -56,7 +56,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
         }
 
 
-        /*parte responsavel por assumir a info do form respectivo ao Ctrl "ContactosController" */
+        /*parte responsavel por assumir a info do form respectivo ao Ctrl "ContactosController" 
        
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -71,8 +71,8 @@ namespace Global_Games_Exercise_Cet49.Controllers
             return View(contacto);
         }
 
-
-        /* parte refente à Newsletter */
+      */
+        /* parte refente à Newsletter
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -89,7 +89,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
 
 
 
-
+         */
 
 
 
