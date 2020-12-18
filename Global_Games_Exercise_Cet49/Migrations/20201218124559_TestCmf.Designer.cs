@@ -4,14 +4,16 @@ using Global_Games_Exercise_Cet49.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Global_Games_Exercise_Cet49.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201218124559_TestCmf")]
+    partial class TestCmf
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,6 +41,33 @@ namespace Global_Games_Exercise_Cet49.Migrations
                     b.ToTable("Contactos");
                 });
 
+            modelBuilder.Entity("Global_Games_Exercise_Cet49.Data.Entities.inscri", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Adress")
+                        .IsRequired();
+
+                    b.Property<DateTime>("Birth");
+
+                    b.Property<string>("CC")
+                        .IsRequired();
+
+                    b.Property<string>("City")
+                        .IsRequired();
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Surname")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("incris");
+                });
+
             modelBuilder.Entity("Global_Games_Exercise_Cet49.Data.Entities.Newl", b =>
                 {
                     b.Property<int>("Id")
@@ -51,34 +80,6 @@ namespace Global_Games_Exercise_Cet49.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Newls");
-                });
-
-            modelBuilder.Entity("Global_Games_Exercise_Cet49.Data.Entities.Registo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Adress")
-                        .IsRequired();
-
-                    b.Property<DateTime>("Birth");
-
-                    b.Property<string>("CC")
-                        .IsRequired();
-
-                    b.Property<string>("Local")
-                        .IsRequired();
-
-                    b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.Property<string>("Sur")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Registos");
                 });
 #pragma warning restore 612, 618
         }

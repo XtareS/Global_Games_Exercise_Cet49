@@ -10,6 +10,8 @@ namespace Global_Games_Exercise_Cet49.Data
 
         public DbSet<Newl> Newls { get; set; }
 
+        public DbSet<Registo> Registos { get; set; }
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 

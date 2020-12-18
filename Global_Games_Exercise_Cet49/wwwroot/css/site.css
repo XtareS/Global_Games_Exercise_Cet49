@@ -161,6 +161,62 @@ aside#sidebar .orcamento textarea {
     padding: 5px;
 }
 
+/*Página de registo*/
+
+.top_Title{
+    color:#e8491d;
+    font-size: 20pt ;
+}
+
+.Sep_Title{
+    color:#e6e6e6 ;
+    background: #35424a ;
+    height:90px;
+    border-radius:5px;
+    text-align:center;
+    
+}
+
+.Sep_Title h3{
+
+    position:relative;
+
+    top: 25% ;
+    font-size: 18pt ;
+
+}
+
+.res_form{
+    position: relative ;
+    left:10%;
+
+}
+
+.res_form_inp {
+    background: #ccc;
+    color: #35424a;
+    width: 80%;
+    height:20px;
+    padding: 6px;
+    margin: 6px;
+    border: none;
+    border-radius: 5px;
+}
+.birth{
+    text-align:center;
+}
+
+.res_bt {
+    background: #e8491d;
+    color: #ccc;
+    position: relative;
+    left: 5%;
+    height: 50px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+}
+
 /*Footer*/
 footer {
     padding: 20px;

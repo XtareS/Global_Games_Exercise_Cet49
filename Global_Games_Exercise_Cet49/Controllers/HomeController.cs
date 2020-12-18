@@ -44,20 +44,32 @@ namespace Global_Games_Exercise_Cet49.Controllers
 
 
 
+        public IActionResult Registo()
+        {
+            ViewData["Message"] = "YourRegistration page.";
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        //Contactos
+
+
+        // GET:Dados/Create
+        public IActionResult Create()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
 
 
-        /*parte responsavel por assumir a info do form respectivo ao Ctrl "ContactosController" 
-       
+
+        // POST: Contactos/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Mail,Mensage")] Contacto contacto)
@@ -66,30 +78,57 @@ namespace Global_Games_Exercise_Cet49.Controllers
             {
                 _context.Add(contacto);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Services","Home");
             }
             return View(contacto);
         }
 
-      */
-        /* parte refente à Newsletter
 
+
+        //registos
+
+        // POST: Registos/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Mail")] Newl newl)
+        public async Task<IActionResult> Create([Bind("Id,Name,Sur,Adress,Local,CC,Birth")] Registo registo)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(newl);
+                _context.Add(registo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(newl);
+            return View(registo);
         }
 
 
 
-         */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
 
 
 

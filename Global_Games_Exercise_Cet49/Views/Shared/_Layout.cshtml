@@ -22,6 +22,7 @@
                     <li id="Home"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li id="About"><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
                     <li id="Services"><a asp-area="" asp-controller="Home" asp-action="Services">Serviços</a></li>
+                    <li id="Regi"><a asp-area="" asp-controller="Home" asp-action="Registo">Pré-registo</a></li>
                     @* <li id="Contactos" ><a asp-area="" asp-controller="Contactos" asp-action="Index">Contactos</a></li>*@
                 </ul>
             </nav>
@@ -47,11 +48,14 @@
 
 
         <hr />
-        @* Footer *@
-        <footer>
-            <p>Global Games, Todos os direitos reservados &copy; CET 49  @DateTime.Now.Year</p>
-        </footer>
+
     </div>
+    @* Footer *@
+<div class="container-fluid">
+    <footer>
+        <p>Global Games, Todos os direitos reservados &copy; CET 49  @DateTime.Now.Year</p>
+    </footer>
+</div>
 
     <environment include="Development">
 
