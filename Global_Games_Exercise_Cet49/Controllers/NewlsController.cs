@@ -17,7 +17,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
 
 
         // GET: Newls/Create
-        public IActionResult Create()
+        public IActionResult Creater()
         {
             return View();
         }
@@ -27,13 +27,13 @@ namespace Global_Games_Exercise_Cet49.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Mail")] Newl newl)
+        public async Task<IActionResult> Creater([Bind("Id,Mail")] Newl newl)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(newl);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("#","Home");
             }
             return View();
         }

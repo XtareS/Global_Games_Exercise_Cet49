@@ -66,6 +66,13 @@ namespace Global_Games_Exercise_Cet49.Controllers
         }
 
 
+        // GET:Dados/Creater
+        public IActionResult Creater()
+        {
+            return View();
+        }
+
+
 
         // POST: Contactos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -92,17 +99,16 @@ namespace Global_Games_Exercise_Cet49.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Sur,Adress,Local,CC,Birth")] Registo registo)
+        public async Task<IActionResult> Create([Bind("Id,Name,Sur,Adress,Local,CC,Birth,Mail")] Registo registo)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(registo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Registo", "Home");
             }
             return View(registo);
         }
-
 
 
 

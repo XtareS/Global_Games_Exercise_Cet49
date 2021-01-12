@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Global_Games_Exercise_Cet49.Data.Entities
 {
     public class Registo
     {
 
-       
+
         public int Id { get; set; }
+
+ 
+        [Display(Name = "  ")]
+        public string ImageUrl { get; set; }
 
         [Required]
         [Display(Name = " ")]
         public string Name { get; set; }
 
 
-       
         [Required]
         [Display(Name = " ")]
         public string Sur { get; set; }
@@ -27,7 +27,6 @@ namespace Global_Games_Exercise_Cet49.Data.Entities
         public string Adress { get; set; }
 
 
-        [Required]
         [Display(Name = " ")]
         public string Local { get; set; }
 
@@ -40,7 +39,13 @@ namespace Global_Games_Exercise_Cet49.Data.Entities
 
         [Required]
         [Display(Name = " ")]
+        
         public DateTime Birth { get; set; }
+
+
+
+        [EmailAddress, Display(Name = " ")]
+        public string Email { get; set; }
 
 
 
