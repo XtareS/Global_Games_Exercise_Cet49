@@ -5,10 +5,8 @@ namespace Global_Games_Exercise_Cet49.Data.Entities
     using System.ComponentModel.DataAnnotations;
 
 
-    public class Registo
+    public class Tester : IRegisto
     {
-
-
         public int Id { get; set; }
 
         [Required]
@@ -42,7 +40,7 @@ namespace Global_Games_Exercise_Cet49.Data.Entities
         public DateTime Birth { get; set; }
 
 
-
-
+        [Display(Name = "Ur Pic")]
+        public string ImageUrl { get; set; }
     }
 }

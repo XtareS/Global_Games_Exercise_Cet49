@@ -51,7 +51,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ImageUrl,Name,Sur,Adress,Local,CC,Birth,Email")] Registo registo)
+        public async Task<IActionResult> Create([Bind("Id,Name,Sur,Adress,Local,CC,Birth")] Registo registo)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ImageUrl,Name,Sur,Adress,Local,CC,Birth,Mail")] Registo registo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Sur,Adress,Local,CC,Birth")] Registo registo)
         {
             if (id != registo.Id)
             {

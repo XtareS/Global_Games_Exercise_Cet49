@@ -10,7 +10,7 @@ namespace Global_Games_Exercise_Cet49.Data.Entities
 
 
 
-        [Display(Name =" ")]
+        [Required,Display(Name =" ")]
         public string Mail { get; set; }
 
     }

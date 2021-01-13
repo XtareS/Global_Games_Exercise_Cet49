@@ -1,5 +1,4 @@
-﻿@model Global_Games_Exercise_Cet49.Data.Entities.Registo
-
+﻿@model Global_Games_Exercise_Cet49.Models.TesterViewModel
 
 
 
@@ -7,61 +6,59 @@
 @{
     ViewData["Title"] = "Registo";
 }
-<h2 class="top_Title"> Faz aqui o teu Pré-registo </h2>
+<h2 class="top_Title" > Faz aqui o teu Pré-registo </h2>
 
 <div class="container-fluid Sep_Title">
 
     <h3>    VR "Rap-Unzel" Game | inscrições para tester   </h3>
 </div>
 
-<div class="res_form">
-    <form id="insc" asp-controller="Registos" asp-action="Create">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="ImageUrl" class="control-label"></label>
-            <input asp-for="ImageUrl" class="form-control" placeholder="Imagem" />
-            <span asp-validation-for="ImageUrl" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Name" class="control-label"></label>
-            <input asp-for="Name" class="form-control res_form_inp " placeholder="Nome" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Sur" class="control-label"></label>
-            <input asp-for="Sur" class="form-control res_form_inp" placeholder="Apelido" />
-            <span asp-validation-for="Sur" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Email" class="control-label"></label>
-            <input asp-for="Email" class="form-control res_form_inp" placeholder="Email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Adress" class="control-label"></label>
-            <input asp-for="Adress" class="form-control res_form_inp" placeholder="Morada" />
-            <span asp-validation-for="Adress" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Local" class="control-label"> </label>
-            <input asp-for="Local" class="form-control res_form_inp" placeholder="Localidade" />
-            <span asp-validation-for="Local" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="CC" class="control-label"></label>
-            <input asp-for="CC" class="form-control res_form_inp" placeholder="Nº de CC" />
-            <span asp-validation-for="CC" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Birth" class="control-label"></label>
-            <input asp-for="Birth" class="form-control res_form_inp birth" placeholder="Data de nascimento" />
-            <span asp-validation-for="Birth" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <button type="submit" class=" res_bt btn btn-default"> Efectuar o meu Registo</button>
-        </div>
-    </form>
-</div>
+    <div class="res_form" >
+        <br>
+        <form id="insc" asp-action="Tester" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control res_form_inp " placeholder="Nome" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sur" class="control-label"></label>
+                <input asp-for="Sur" class="form-control res_form_inp" placeholder="Apelido" />
+                <span asp-validation-for="Sur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adress" class="control-label"></label>
+                <input asp-for="Adress" class="form-control res_form_inp" placeholder="Morada" />
+                <span asp-validation-for="Adress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Local" class="control-label"> </label>
+                <input asp-for="Local" class="form-control res_form_inp" placeholder="Localidade" />
+                <span asp-validation-for="Local" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CC" class="control-label"></label>
+                <input asp-for="CC" class="form-control res_form_inp" placeholder="Nº de CC" />
+                <span asp-validation-for="CC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birth" class="control-label"></label>
+                <input asp-for="Birth" class="form-control res_form_inp birth" placeholder="Data de nascimento" />
+                <span asp-validation-for="Birth" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" class="form-control" type="file" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Efectuar o meu Registo" class=" res_bt btn btn-default" />
+            </div>
+        </form>
+    </div>
 
 
 
@@ -72,13 +69,26 @@
 
     <script>
         const formu = document.querySelector("#insc");
+
+
+
         Event();
+
+
+
         function Event() {
             formu.addEventListener("submit", submit);
         }
+
+
+
         function submit(e) {
             alert('Agora é só esperares que a gente te chame')
         }
+
+
+
     </script>
+
 
 }

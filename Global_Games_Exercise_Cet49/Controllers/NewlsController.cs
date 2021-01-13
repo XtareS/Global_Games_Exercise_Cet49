@@ -33,7 +33,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
             {
                 _context.Add(newl);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("#","Home");
+                return RedirectToAction("Index","Home");
             }
             return View();
         }

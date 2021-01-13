@@ -1,8 +1,10 @@
-﻿using Global_Games_Exercise_Cet49.Data.Entities;
-using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace Global_Games_Exercise_Cet49.Data
 {
+    using Global_Games_Exercise_Cet49.Data.Entities;
+    using Microsoft.EntityFrameworkCore;
+
+
     public class DataContext : DbContext
     {
 
@@ -12,6 +14,7 @@ namespace Global_Games_Exercise_Cet49.Data
 
         public DbSet<Registo> Registos { get; set; }
 
+        public DbSet<Tester> Tester { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 

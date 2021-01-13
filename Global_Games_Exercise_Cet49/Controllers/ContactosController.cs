@@ -60,7 +60,7 @@ namespace Global_Games_Exercise_Cet49.Controllers
             {
                 _context.Add(contacto);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Services","Home");
+                return RedirectToAction(nameof(Index));
             }
             return View(contacto);
         }
